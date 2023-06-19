@@ -23,7 +23,7 @@ Only support these data flow actions:
 Example:
 
 ```shell
-go get -u github.com/TencentCloud/tencentcloud-cmq-sdk-go@1.0.0
+go get -u github.com/TencentCloud/tencentcloud-cmq-sdk-go@v1.0.0
 ```
 
 ```go
