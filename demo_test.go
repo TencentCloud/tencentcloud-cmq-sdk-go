@@ -10,7 +10,7 @@ import (
 func TestSyncSingleSendMessageAndSingleReceiveMessage(t *testing.T) {
 	// 1. 创建 cmq client
 	// 替换成实际的接入点以及ak、sk
-	client, err := NewClient("http://9.130.121.198:8080", "AKIDQhhYDscFl4A3VmwvjNn7FC70hCXih1Oe", "89CIH83qRp5KXpzyxoT2OYjlniSCoMWc", 5*time.Second)
+	client, err := NewClient("", "", "", 5*time.Second)
 	if err != nil {
 		fmt.Println("create cmq client error.", err)
 		return
@@ -66,7 +66,7 @@ func TestSyncSingleSendMessageAndSingleReceiveMessage(t *testing.T) {
 func TestSyncBatchSendMessageAndBatchReceiveMessage(t *testing.T) {
 	// 1. 创建 cmq client
 	// 替换成实际的接入点以及ak、sk
-	client, err := NewClient("http://9.130.121.198:8080", "AKIDQhhYDscFl4A3VmwvjNn7FC70hCXih1Oe", "89CIH83qRp5KXpzyxoT2OYjlniSCoMWc", 5*time.Second)
+	client, err := NewClient("", "", "", 5*time.Second)
 	if err != nil {
 		fmt.Println("create cmq client error.", err)
 		return
@@ -128,7 +128,7 @@ func TestSyncBatchSendMessageAndBatchReceiveMessage(t *testing.T) {
 func TestAsyncBatchSendMessageAndBatchReceiveMessage(t *testing.T) {
 	// 1. 创建 cmq client
 	// 替换成实际的接入点以及ak、sk
-	client, err := NewClient("http://9.130.121.198:8080", "AKIDQhhYDscFl4A3VmwvjNn7FC70hCXih1Oe", "89CIH83qRp5KXpzyxoT2OYjlniSCoMWc", 5*time.Second)
+	client, err := NewClient("", "", "", 5*time.Second)
 	if err != nil {
 		fmt.Println("create cmq client error.", err)
 		return
@@ -200,7 +200,7 @@ func TestAsyncBatchSendMessageAndBatchReceiveMessage(t *testing.T) {
 func TestDelayMessage(t *testing.T) {
 	// 1. 创建 cmq client
 	// 替换成实际的接入点以及ak、sk
-	client, err := NewClient("http://9.130.121.198:8080", "AKIDQhhYDscFl4A3VmwvjNn7FC70hCXih1Oe", "89CIH83qRp5KXpzyxoT2OYjlniSCoMWc", 5*time.Second)
+	client, err := NewClient("", "", "", 5*time.Second)
 	if err != nil {
 		fmt.Println("create cmq client error.", err)
 		return
@@ -258,7 +258,7 @@ func TestDelayMessage(t *testing.T) {
 func TestSimpleTopic(t *testing.T) {
 	// 1. 创建 cmq client
 	// 替换成实际的接入点以及ak、sk
-	client, err := NewClient("http://9.130.121.198:8080", "AKIDQhhYDscFl4A3VmwvjNn7FC70hCXih1Oe", "89CIH83qRp5KXpzyxoT2OYjlniSCoMWc", 5*time.Second)
+	client, err := NewClient("", "", "", 5*time.Second)
 	if err != nil {
 		fmt.Println("create cmq client error.", err)
 		return
@@ -318,7 +318,7 @@ func TestSimpleTopic(t *testing.T) {
 func TestTopicWithTag(t *testing.T) {
 	// 1. 创建 cmq client
 	// 替换成实际的接入点以及ak、sk
-	client, err := NewClient("http://9.130.121.198:8080", "AKIDQhhYDscFl4A3VmwvjNn7FC70hCXih1Oe", "89CIH83qRp5KXpzyxoT2OYjlniSCoMWc", 5*time.Second)
+	client, err := NewClient("", "", "", 5*time.Second)
 	if err != nil {
 		fmt.Println("create cmq client error.", err)
 		return
@@ -377,7 +377,7 @@ func TestTopicWithTag(t *testing.T) {
 func TestTopicWithRouteKey(t *testing.T) {
 	// 1. 创建 cmq client
 	// 替换成实际的接入点以及ak、sk
-	client, err := NewClient("http://9.130.121.198:8080", "AKIDQhhYDscFl4A3VmwvjNn7FC70hCXih1Oe", "89CIH83qRp5KXpzyxoT2OYjlniSCoMWc", 5*time.Second)
+	client, err := NewClient("", "", "", 5*time.Second)
 	if err != nil {
 		fmt.Println("create cmq client error.", err)
 		return
