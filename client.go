@@ -15,7 +15,7 @@ import (
 )
 
 type Client struct {
-	id         uint64   // clientRequestId
+	Id         uint64   // clientRequestId
 	Url        *url.URL // ex: http://gateway.tdmq.io
 	Method     string   // GET, POST
 	SignMethod string   // HmacSHA1, HmacSHA256
@@ -46,7 +46,7 @@ func NewClient(uri, secretId, secretKey string, t time.Duration, keepalive ...bo
 		shortLive = !keepalive[0]
 	}
 	c = &Client{
-		id:         uint64(rand.Uint32()),
+		Id:         uint64(rand.Uint32()),
 		Method:     http.MethodPost,
 		SignMethod: HmacSHA1,
 		SecretId:   secretId,
@@ -75,8 +75,8 @@ func NewClient(uri, secretId, secretKey string, t time.Duration, keepalive ...bo
 
 func (c *Client) call(values url.Values) (msg *msgResponse, err error) {
 	values.Set(`RequestClient`, currentVersion)
-	if c.id > 0 {
-		values.Set(`clientRequestId`, strconv.FormatUint(c.id, 10))
+	if c.Id > 0 {
+		values.Set(`clientRequestId`, strconv.FormatUint(c.Id, 10))
 	}
 	if c.AppId > 0 && c.SecretId == `` && c.SecretKey == `` {
 		values.Set(`appId`, strconv.FormatUint(c.AppId, 10))
