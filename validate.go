@@ -14,7 +14,7 @@ var (
 	MaxRouteKeyLength = 64
 	MaxRouteKeyDots   = 15
 	MaxTagCount       = 5
-	MaxTagLength      = 16
+	MaxTagLength      = 64
 )
 
 var (
